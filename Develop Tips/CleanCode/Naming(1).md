@@ -41,3 +41,32 @@
 ### One word for one abstract concept
   + 한 개념당 하나의 단어를 사용하여 이름을 짓는다면 모호해지는 것을 피할 수 있다.
   
+길다고 다 좋은건 아니다.
+-----
+### 위에서 말한 __One word for one abstract concept__ 을 지킨다면 이름이 길어지지 않을 것이다.   
+  + 즉, 한 개념당 하나의 단어로만 표현한다면 쓸데없이 길어지는 경우를 피할 수 있다.
+  
+### 함수 이름에 파라미터나 리턴타입같은 다른 시그니처 구성 요소와 중복되는 단어가 있다면 제거하는 것도 방법이다.
+  + __List<string> GetAllNonNullValuesFromMap(Map<string, string> map)__ 이란 함수에서 파라미터에 Map 타입이 있기 때문에   
+  함수명에서 FromMap부분을 생략 할 수 있을 것이다.   
+  ___List<string> GetAllNonNullValues(Map<string, string> map)__ 과 같이 작성하면 된다.
+  
+불필요한 단어 중복은 피한다.
+-----
+### 클래스의 이름으로부터 의미를 파악할 수 있는 내용은 이름에서 빼는 것이 좋다.
+  ```c
+    public class PlayerMove
+    {
+      public void PlayerMoveLeft(){...}
+      public void PlayerMoveRight(){...}
+      public void PlayerMove Up(){...}
+      ...
+    }
+  ```
++ 위 클래스와 같이 클래스의 이름으로부터 PlayerMove라는 의미를 파악할 수 있기 때문에, 불필요하게 작성된 매서드들의 PlayerMove를 삭제하고   
+Left, Right로 간편하게 만들 수 있다.
+
+난해함을 피한다.
+-----
++ 처음보는 전문용어나, 나만 알고있는 특이한 단어의 사용을 피한다.
++ 통상적으로 사용하고 있는 단어들은 사용해도 괜찮지만(board, upboard등) 사용하려는 단어가 다른 단어로 대체가 불가능 할 경우에 사용하는 것이 좋다.
