@@ -49,6 +49,9 @@ SerializeField
 Serializable
 -----
 
+NonSerialized
+-----
+
 HideInInsepector
 -----
 
@@ -67,6 +70,17 @@ Space
 Tooltip
 -----
 
+TextArea
+-----
+
+RequireComponent
+-----
+
+ExecuteInEditMode
+-----
+
+DisAllowMultipleComponent
+-----
 
 
 
