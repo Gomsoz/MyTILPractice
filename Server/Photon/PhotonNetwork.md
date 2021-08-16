@@ -1,22 +1,22 @@
 # Properties
 
-CountOfPlayers
+int CountOfPlayers
 -----
 - 접속한 인원 수
 
-CountOfRooms
+int CountOfRooms
 -----
 - 방 개수
 
-CountOfPlayersInRooms
+int CountOfPlayersInRooms
 -----
 - 모든 방에 있는 인원 수
 
-InLobby
+bool InLobby
 -----
 - 플레이어가 방에 있는지 체크
 
-IsConnected
+bool IsConnected
 -----
 - 플레이어가 서버에 연결되어 있는지 체크
 
@@ -24,12 +24,27 @@ Player[] PlayerList
 -----
 - 현재 방에 있는 플레이어의 리스트를 반환한다.
 
+# Class
+
+CurrentRoom
+-----
+- 현재 방에 대한 정보를 담고 있음.
+- Properties
+  - Name : 방 이름
+  - PlayerCount : 방 인원 수
+  - MaxPlayers : 방 최대 인원 수
+
+LocalPlayer
+-----
+- 플레이어의 정보를 담고 있음.
+- Properties
+  - NickName : 닉네임
+
 # Function
 
 ConnectUsingSetting
 -----
 - Photon 서버와 연결
-
 
 CreateRoom(string roomName, RoomOptions roomOptions = null, TypedLobby typedLobby = null, string[] expectedUsers = null)
 -----
@@ -80,9 +95,11 @@ OnJoinLobby()
 
 OnCreatedRoom()
 -----
+- 방을 성공적으로 생성했을 때 호출
 
 OnJoinedRoom()
 -----
+- 방에 성공적으로 접속하였을 때 호출
 
 virtual OnCreateRoomFailed(short returnCode, string message)
 -----
@@ -97,3 +114,12 @@ virtual OnJoinRandomFailed(short returnCode, string message)
 
 OnPlayerEnterRoom(Player newPlayer)
 - 플레이어가 방에 들어왔을 때 호출
+
+
+# Interface
+
+## IpunObservable
+
+OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+-----
+
