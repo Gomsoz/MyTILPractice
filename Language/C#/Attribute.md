@@ -6,7 +6,7 @@ Attribute
 - __positional_parameter__ : 필수적으로 입력되어져야 하며, 생성자 매개변수에 해당한다.
 - __named_parameter__ : 선택적인 입력이며, 매개변수의 이름과 값을 나타낸다.
 
-표준 attribute
+표준 Attribute
 -----
 ### Conditional attribute
 - 조건부 메소드를 작성할 때 사용한다. 일종의 조건부 컴파일 같은 역할을 한다.
